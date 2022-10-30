@@ -1,4 +1,5 @@
 - name: Install tor browser, required dependencies and tools - YAY
   yay:
     name: "{{tor}}"
+    state: present
   become: true

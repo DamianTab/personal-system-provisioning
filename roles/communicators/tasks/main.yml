@@ -1,4 +1,5 @@
 - name: Install communicators - YAY
   yay:
     name: "{{communicators}}"
+    state: present
   become: true

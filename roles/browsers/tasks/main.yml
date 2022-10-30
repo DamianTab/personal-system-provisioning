@@ -1,4 +1,5 @@
 - name: Install browsers - YAY
   yay:
     name: "{{browsers}}"
+    state: present
   become: true

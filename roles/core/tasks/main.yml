@@ -42,5 +42,6 @@
 - name: Install Core Utils - YAY
   yay:
     name: "{{other_core_utils}}"
+    state: present
   become: true
 

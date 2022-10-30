@@ -56,9 +56,12 @@ other_core_utils:
 #     - kubectx
 
 
+virtualization:
+    - vagrant
+    - virtualbox
+
 # cloud:
     # - aws-cli-v2-bin trzeba inaczej
-
 
 browsers:
     - google-chrome
