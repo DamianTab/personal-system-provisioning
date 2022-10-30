@@ -6,8 +6,8 @@
 
     # - {role: browsers, tags: [browsers]}
     # - {role: communicators, tags: [communicators]}
-    - {role: media, tags: [media]}
-    - {role: tor, tags: [tor, never]}
+    # - {role: media, tags: [media]}
+    # - {role: tor, tags: [tor, never]}
 
   handlers:
     - import_tasks: handlers/os-restart.yml
