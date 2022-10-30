@@ -1,5 +1,3 @@
----
-
 - name: Update cache and upgrade - PACMAN
   block:
     - name: Update and upgrade - PACMAN
@@ -10,6 +8,7 @@
       become: true
       tags:
         - update_and_upgrade
+        - always
 
   rescue:
     - name: RESCUE - Remove pacman db lock
@@ -36,9 +35,10 @@
   become: true
   tags:
     - update_and_upgrade
+    - always
 
-- name: Install Core Utils from AUR - YAY
+- name: Install Core Utils - YAY
   yay:
-    name: "{{aur_core_utils}}"
+    name: "{{other_core_utils}}"
   become: true
 

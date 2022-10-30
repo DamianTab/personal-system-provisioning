@@ -3,20 +3,12 @@
   hosts: all
   roles:
     - {role: core, tags: [core]}
-    # - {role: users, tags: [users, never]}
-    # - {role: printers, tags: [printers]}
+
     # - {role: browsers, tags: [browsers]}
-    # - {role: development, tags: [development]}
-    # - {role: cloud, tags: [cloud]}
-    # - {role: editors, tags: [editors]}
-    # - {role: media, tags: [media]}
-    # - {role: multimedia, tags: [multimedia]}
-    # - {role: audio, tags: [audio]}
-    # - {role: comms, tags: [comms]}
-    # - {role: gnome, tags: [gnome]}
-    # - {role: security, tags: [security]}
-    # - {role: virtualization, tags: [virtualization]}
+    # - {role: communicators, tags: [communicators]}
+    - {role: media, tags: [media]}
+    - {role: tor, tags: [tor, never]}
 
   handlers:
-    - import_tasks: handlers/os.yml
+    - import_tasks: handlers/os-restart.yml
     - import_tasks: handlers/freshclam.yml

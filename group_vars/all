@@ -17,10 +17,48 @@ core_utils:
     - nano
     - yay
 
-
-other_utils:
+# all other utils in official repositories and AUR
+other_core_utils:
     - thefuck
     - zip
+
+# drivers:
+#     - hplip
+
+
+# developer_tools:
+#     - jetbrains-toolbox
+#     - visual-studio-code-bin
+#     - ansible
+#     - ansible-lint
+#     - maven
+#     - npm
+#     - nodejs
+#     - terraform
+#     - postman-bin
+
+#     - jdk8-openjdk
+#     - jdk11-openjdk
+#     - jre8-openjdk-headless
+#     - jre8-openjdk
+#     - jre11-openjdk-headless
+#     - jre11-openjdk
+
+#     - go
+#     - go-tools
+
+#     - docker
+#     - docker-compose
+
+
+#     - kubectl
+#     - minikube
+#     - kubectx
+
+
+# cloud:
+    # - aws-cli-v2-bin trzeba inaczej
+
 
 browsers:
     - google-chrome
@@ -30,7 +68,14 @@ media:
     - audacity
     - vlc
     - gimp
+    - spotify
 
-audio_tools:
-    - 
+communicators:
+    - slack-desktop
+    - discord
+
+tor:
+    - nyx
+    - tor
+    - torbrowser-launcher
 

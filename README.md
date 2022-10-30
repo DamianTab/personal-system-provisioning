@@ -98,7 +98,9 @@ ansible-lint
 ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
 ```
 
-### Localhost machine - Run Ansible playbook
+<br/>
+
+### Localhost machine
 ```
 ansible-lint
 ansible-playbook -vv playbook.yml -l localhost --ask-become-pass

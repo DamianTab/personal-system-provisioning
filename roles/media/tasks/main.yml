@@ -1,0 +1,4 @@
+- name: Install media - YAY
+  yay:
+    name: "{{media}}"
+  become: true
