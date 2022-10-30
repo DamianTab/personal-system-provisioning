@@ -4,14 +4,33 @@ core_utils:
     - gcc
     - htop
     - make
+    - cmake
     - pamac
     - python-pip
     - tree
     - wget
+    - curl
     - xclip
     - xorg-xinput
+    - xorg
+    - vim
+    - nano
     - yay
 
-audio_tools:
+
+other_utils:
+    - thefuck
+    - zip
+
+browsers:
+    - google-chrome
+    - brave
+
+media:
     - audacity
+    - vlc
+    - gimp
+
+audio_tools:
+    - 
 

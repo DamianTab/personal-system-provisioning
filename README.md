@@ -4,11 +4,11 @@
 <!-- LOGO https://hatchful.shopify.com -->
 
 [status-icon]: https://img.shields.io/badge/status-active-success.svg
-[project-url]: PROJECT_URL
-[issues-icon]: https://img.shields.io/github/issues/DamianTab/REPO_NAME.svg
-[issues-url]: PROJECT_URL/issues
+[project-url]: https://github.com/DamianTab/personal-system-provisioning
+[issues-icon]: https://img.shields.io/github/issues/DamianTab/personal-system-provisioning.svg
+[issues-url]: https://github.com/DamianTab/personal-system-provisioning/issues
 [pulls-icon]: https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg
-[pulls-url]: PROJECT_URL/pulls
+[pulls-url]: https://github.com/DamianTab/personal-system-provisioning/pulls
 [license-icon]: https://shields.io/badge/license-Apache%202-blue.svg
 [license-url]: /LICENSE
 [author-url]: https://github.com/DamianTab
@@ -19,7 +19,7 @@
 </p>
 
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Personal system provisioning</h3>
 
 <div align="center">
   
@@ -94,17 +94,15 @@ vagrant up --provision
 
 #### Run Ansible playbook against the Vagrant VM
 ```
-ansible-playbook playbook.yml -l testmachine --ask-become-pass
+ansible-lint
+ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
 ```
 
-### Run and configure the localhost machine
-
-#### Install everything
+### Localhost machine - Run Ansible playbook
 ```
 ansible-lint
-ansible-playbook playbook.yml -l localhost --ask-become-pass
+ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
 ```
-
 
 ## :toolbox: Playbook Roles
 
@@ -112,6 +110,7 @@ Roles supported:
 
 | Roles          | Description                                                                                                      |
 |----------------|------------------------------------------------------------------------------------------------------------------|
+| update_and_upgrade           | Update and upgrade system with all libraries                                     |
 | core           | Install Linux util libraries, python-pip, xinput, terminator, snap and zsh                                       |
 | users          | Setup user accounts                                                                                              |
 | printers       | Install printer drivers                                                                                          |

@@ -2,20 +2,20 @@
 
 - name: Update cache and upgrade - PACMAN
   block:
-    - name: Update and upgrade pacman
+    - name: Update and upgrade - PACMAN
       community.general.pacman:
         update_cache: true
         upgrade: true
         upgrade_extra_args: --noconfirm
       become: true
       tags:
-        - update_and_upgrade_pacman
+        - update_and_upgrade
 
   rescue:
     - name: RESCUE - Remove pacman db lock
       command: rm /var/lib/pacman/db.lck
       become: true
-    - name: Update and upgrade pacman - second try after rescue
+    - name: Update and upgrade - PACMAN - second try after rescue
       community.general.pacman:
         update_cache: true
         upgrade: true
@@ -23,8 +23,22 @@
       become: true
 
 
-- name: Install Core Utils
+- name: Install Core Utils - PACMAN
   community.general.pacman:
     name: "{{ core_utils }}"
     state: present
   become: true
+
+- name: Update cache and upgrade - YAY with AUR
+  yay:
+    update_cache: true
+    upgrade: true
+  become: true
+  tags:
+    - update_and_upgrade
+
+- name: Install Core Utils from AUR - YAY
+  yay:
+    name: "{{aur_core_utils}}"
+  become: true
+
