@@ -58,8 +58,6 @@ This project provision all necessary programs and libs for ARCH distribution lin
 <br/>
   
 ## 🏁 Getting Started <a name = "getting_started"></a>
-
-<br/>
   
 ### Prerequisites
 What things you need to install the software and how to install them.
@@ -96,7 +94,7 @@ vagrant up --provision
 
 #### Run Ansible playbook against the Vagrant VM
 ```
-ansible-playbook playbook.yml -l testmachine --extra-vars="user_name=USERNAME user_git_name=GIT_USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook playbook.yml -l testmachine --ask-become-pass
 ```
 
 ### Run and configure the localhost machine
@@ -104,7 +102,7 @@ ansible-playbook playbook.yml -l testmachine --extra-vars="user_name=USERNAME us
 #### Install everything
 ```
 ansible-lint
-ansible-playbook playbook.yml -l localhost --extra-vars="user_name=USERNAME user_git_name=GIT_USERNAME user_email=EMAIL" --ask-become-pass
+ansible-playbook playbook.yml -l localhost --ask-become-pass
 ```
 
 
@@ -114,7 +112,7 @@ Roles supported:
 
 | Roles          | Description                                                                                                      |
 |----------------|------------------------------------------------------------------------------------------------------------------|
-| base           | Install Linux util libraries, python-pip, xinput, terminator, snap and zsh                                       |
+| core           | Install Linux util libraries, python-pip, xinput, terminator, snap and zsh                                       |
 | users          | Setup user accounts                                                                                              |
 | printers       | Install printer drivers                                                                                          |
 | browsers       | Install tor, google-chrome and chromedriver                                                                      |

@@ -1,2 +1,17 @@
+core_utils:
+    - base-devel
+    - binutils
+    - gcc
+    - htop
+    - make
+    - pamac
+    - python-pip
+    - tree
+    - wget
+    - xclip
+    - xorg-xinput
+    - yay
+
 audio_tools:
     - audacity
+

@@ -1,0 +1,8 @@
+# Playbook Retry
+playbook.retry
+
+# IntelliJ IDEA
+.idea
+
+# Vagrant build folder
+.vagrant
