@@ -28,6 +28,12 @@ other_core_utils:
 # drivers:
 #     - hplip
 
+security:
+    - clamav
+    - clamtk
+    - gufw
+    - ufw
+    - ufw-extras
 
 # developer_tools:
 #     - jetbrains-toolbox

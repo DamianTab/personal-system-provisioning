@@ -1,0 +1,16 @@
+- name: Allow everything and enable UFW
+  community.general.ufw:
+    state: enabled
+    policy: allow
+  become: true
+
+- name: Set logging
+  community.general.ufw:
+    logging: 'on'
+  become: true
+
+- name: Deny all incoming access
+  community.general.ufw:
+    policy: deny
+    direction: incoming
+  become: true

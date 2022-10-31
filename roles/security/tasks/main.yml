@@ -1,0 +1,8 @@
+- name: Install security packages - YAY
+  yay:
+    name: "{{security}}"
+    state: present
+  become: true
+
+- import_tasks: clamav.yml
+- import_tasks: ufw.yml

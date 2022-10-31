@@ -114,7 +114,7 @@ Roles supported:
 |:------------------:|:------:|:-----:|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 |        core        |    x   |   x   | Install Linux util libraries, python-pip, xinput, gcc, glib, pamac etc.                                                                           |
 |       drivers      |    x   |  yes  | (Optional) Install printer drivers: hplip                                                                                                         |
-|      security      |    x   |   x   | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                |
+|      security      |    x   |   x   | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons, firewall and refresh virus database                                                |
 |   virtualization   |    x   |   x   | Install vagrant, virtualbox and virtualbox-host-modules                                                                                           |
 |     virt_kernel    |    x   |  yes  | (Optional) Load kernel modules with modprobe. Optional step if virtualization is not working. Loads vboxdrv, vboxnetadp, vboxnetflt kernel module |
 |      browsers      |    x   |   x   | Install google-chrome, brave                                                                                                                      |
@@ -123,6 +123,13 @@ Roles supported:
 |        cloud       |    x   |  yes  | (Optional) Install AWS CLI.                                                                                                                       |
 |         tor        |    x   |   x   | Install necessary tools for tor browser.                                                                                                          |
 | update_and_upgrade |   yes  |   x   | (Always done implicity) Update and upgrade system with all libraries                                                                                                      |
+
+
+Roles with attribute always will always be executed, those with never has to be pointed out explicitly. Rest is under default option (no need to explicit select roles) or under default role called "all". For example to execute all default roles and install drivers (optional role) must run:
+
+```
+ansible-playbook -vv playbook.yml -l localhost --ask-become-pass --tags all,drivers
+```
 
 
 Example on how to install only browsers:
