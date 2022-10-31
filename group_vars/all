@@ -25,8 +25,8 @@ other_core_utils:
     - thefuck
     - zip
 
-# drivers:
-#     - hplip
+drivers:
+    - hplip
 
 security:
     - clamav

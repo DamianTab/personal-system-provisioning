@@ -1,0 +1,11 @@
+- name: Install drivers - YAY
+  yay:
+    name: "{{drivers}}"
+    state: present
+  become: true
+
+- name: Automatically setup printer (only work with GUI)
+  command: hp-setup -a {{ pritner_ip_addr }}
+  become: true
+  ignore_errors: true
+

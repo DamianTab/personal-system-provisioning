@@ -3,8 +3,10 @@
   hosts: all
   roles:
     - {role: core, tags: [core]}
+    - {role: drivers, tags: [drivers]}
     # - {role: security, tags: [security]}
     # - {role: virtualization, tags: [virtualization]}
+    # - {role: de, tags: [virtualization]}
     # - {role: browsers, tags: [browsers]}
     # - {role: communicators, tags: [communicators]}
     # - {role: media, tags: [media]}
