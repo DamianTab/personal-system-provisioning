@@ -1,0 +1,48 @@
+- name: Install virtualization tools - YAY
+  yay:
+    name: "{{virtualization}}"
+    state: present
+  become: true
+
+- name: Get the Linux kernel version
+  register: kernel_version
+  ansible.builtin.shell: |
+    set -o pipefail
+    uname -r | awk -F. '{ print $1$2 }'
+  changed_when: false
+
+- name: Install the relevant virtualbox-host-modules - YAY
+  yay:
+    name: linux{{ kernel_version.stdout }}-virtualbox-host-modules
+    state: present
+  become: true
+  ignore_errors: true
+  # todo fix errors
+
+
+- name: Load the vboxdrv kernel module
+  modprobe:
+    name: vboxdrv
+    state: present
+  become: true
+  tags:
+    - virt_kernel
+    - never
+
+- name: Load the vboxnetadp kernel module
+  modprobe:
+    name: vboxnetadp
+    state: present
+  become: true
+  tags:
+    - virt_kernel
+    - never
+
+- name: Load the vboxnetflt kernel module
+  modprobe:
+    name: vboxnetflt
+    state: present
+  become: true
+  tags:
+    - virt_kernel
+    - never

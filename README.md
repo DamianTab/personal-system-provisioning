@@ -110,24 +110,20 @@ ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
 
 Roles supported:
 
-| Roles          | Description                                                                                                      |
-|----------------|------------------------------------------------------------------------------------------------------------------|
-| update_and_upgrade           | Update and upgrade system with all libraries                                     |
-| core           | Install Linux util libraries, python-pip, xinput, terminator, snap and zsh                                       |
-| users          | Setup user accounts                                                                                              |
-| printers       | Install printer drivers                                                                                          |
-| browsers       | Install tor, google-chrome and chromedriver                                                                      |
-| audio-tools    | Install audacity                                                                                                 |
-| dev-tools      | Install tesseract, jq, xq, docker, docker-compose, go, nodejs, npm, nvm, jre8, jre10, maven, clojure, leiningen, sbt, scala, minikube, kubectl, kubectx, kubefwd, hub and heroku                                                                                           |
-| cloud-tools    | Install google-cloud-sdk                                                                                         |
-| editors        | Install vim, emacs, gimp, Intellij + JetBrains Toolbox, Goland, Visual Studio Code and Xmind                     |
-| media          | Install Spotify and Peek (GIF Screen recorder)                                                                   |
-| multimedia     | Install gimp, darktable and kdenlive                                                                             |
-| gnome          | Configure the desktop environment                                                                                |
-| comms          | Install communication/Instant Messaging apps: signal-desktop, slack-desktop                                      |
-| aur            | Install Arch User Repository libraries                                                                           |
-| security       | Install clamav, clamtk, ufw, ufw-extras and gufw                                                                 |
-| virtualization | Install vagrant, virtualbox and virtualbox-host-modules                                                          |
+|        Roles       | always | never |                                                                    Description                                                                    |
+|:------------------:|:------:|:-----:|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+|        core        |    x   |   x   | Install Linux util libraries, python-pip, xinput, gcc, glib, pamac etc.                                                                           |
+|       drivers      |    x   |  yes  | (Optional) Install printer drivers: hplip                                                                                                         |
+|      security      |    x   |   x   | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                |
+|   virtualization   |    x   |   x   | Install vagrant, virtualbox and virtualbox-host-modules                                                                                           |
+|     virt_kernel    |    x   |  yes  | (Optional) Load kernel modules with modprobe. Optional step if virtualization is not working. Loads vboxdrv, vboxnetadp, vboxnetflt kernel module |
+|      browsers      |    x   |   x   | Install google-chrome, brave                                                                                                                      |
+|    communicators   |    x   |   x   | Install slack and discord.                                                                                                                        |
+|        media       |    x   |   x   | Install audacity, gimp, vlc player, spotify etc.                                                                                                  |
+|        cloud       |    x   |  yes  | (Optional) Install AWS CLI.                                                                                                                       |
+|         tor        |    x   |   x   | Install necessary tools for tor browser.                                                                                                          |
+| update_and_upgrade |   yes  |   x   | (Always done implicity) Update and upgrade system with all libraries                                                                                                      |
+
 
 Example on how to install only browsers:
 ```

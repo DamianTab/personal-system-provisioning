@@ -2,6 +2,9 @@ core_utils:
     - base-devel
     - binutils
     - gcc
+    - lib32-glibc
+    - glib2
+    - glibc
     - htop
     - make
     - cmake
@@ -59,6 +62,7 @@ other_core_utils:
 virtualization:
     - vagrant
     - virtualbox
+    - virtualbox-ext-oracle
 
 # cloud:
     # - aws-cli-v2-bin trzeba inaczej

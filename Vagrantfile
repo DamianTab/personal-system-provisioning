@@ -10,7 +10,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provider :virtualbox do |v|
-    v.memory = 1024
+    v.memory = 4096
+    v.cpus = "2"
     v.linked_clone = true
   end
 
