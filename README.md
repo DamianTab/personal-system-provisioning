@@ -98,12 +98,25 @@ ansible-lint
 ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
 ```
 
+#### Install everything (execute all roles)
+
+```
+ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_MAIL"  --ask-become-pass --tags all,drivers,bash,developer,cloud
+```
+
 <br/>
 
 ### Localhost machine
+#### Run Ansible playbook against localhost
 ```
 ansible-lint
 ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
+```
+
+#### Install everything (execute all roles)
+
+```
+ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_MAIL"  --ask-become-pass --tags all,drivers,bash,developer,cloud
 ```
 
 ## :toolbox: Playbook Roles
@@ -144,7 +157,7 @@ ansible-playbook playbook.yml --ask-become-pass --tags browsers
 <p align="center">
   <a name = "beautiful_bash"></a>
   <!-- <a href="" rel="noopener"> -->
- <img width=1200px height=250px src="./assets/bash.png" alt="Beautiful bash example"></a>
+ <img width=900px height=200px src="./assets/bash.png" alt="Beautiful bash example"></a>
 </p>
 
 
