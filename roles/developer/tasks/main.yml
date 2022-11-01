@@ -5,3 +5,4 @@
   become: true
 
 - import_tasks: nodejs.yml
+- import_tasks: docker.yml

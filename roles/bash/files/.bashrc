@@ -371,7 +371,7 @@ distribution ()
 		[ zz`type -t passed 2>/dev/null` == "zzfunction" ] && dtype="redhat"
 	
 	# Then test against SUSE (must be after Redhat,
-	# I've seen rc.status on Ubuntu I think? TODO: Recheck that)
+	# I've seen rc.status on Ubuntu I think?)
 	elif [ -r /etc/rc.status ]; then
 		source /etc/rc.status
 		[ zz`type -t rc_reset 2>/dev/null` == "zzfunction" ] && dtype="suse"
@@ -387,7 +387,7 @@ distribution ()
 		[ zz`type -t ebegin 2>/dev/null` == "zzfunction" ] && dtype="gentoo"
 	
 	# For Mandriva we currently just test if /etc/mandriva-release exists
-	# and isn't empty (TODO: Find a better way :)
+	# and isn't empty
 	elif [ -s /etc/mandriva-release ]; then
 		dtype="mandriva"
 

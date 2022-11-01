@@ -14,5 +14,4 @@
     # - {role: tor, tags: [tor, never]}
 
   handlers:
-    - import_tasks: handlers/os-restart.yml
     - import_tasks: handlers/freshclam.yml

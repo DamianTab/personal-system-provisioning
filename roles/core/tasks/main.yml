@@ -27,6 +27,9 @@
     name: "{{ core_utils }}"
     state: present
   become: true
+  tags:
+    - update_and_upgrade
+    - always
 
 - name: Update cache and upgrade - YAY with AUR
   yay:
@@ -45,7 +48,7 @@
     state: present
   become: true
 
-- name: Ass useful bash scripts
+- name: Add useful bash scripts
   copy: 
     src: "{{ item }}"
     dest: /home/{{ user_name }}
