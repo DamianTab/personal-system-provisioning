@@ -41,6 +41,7 @@ security:
 developer:
     - jetbrains-toolbox
     - visual-studio-code-bin
+    - git   
     - ansible
     - ansible-lint
     - maven

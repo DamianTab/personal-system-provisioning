@@ -6,8 +6,9 @@
     # - {role: drivers, tags: [drivers]}
     # - {role: bash, tags: [bash]}
     # - {role: security, tags: [security]}
-    - {role: developer, tags: [developer]}
+    # - {role: developer, tags: [developer]}
     # - {role: virtualization, tags: [virtualization]}
+    # - {role: cloud, tags: [cloud]}
     # - {role: browsers, tags: [browsers]}
     # - {role: media, tags: [media]}
     # - {role: communicators, tags: [communicators]}
