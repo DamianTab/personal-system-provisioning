@@ -600,3 +600,6 @@ eval "$(starship init bash)"
 #Autojump
 
 . /usr/share/autojump/autojump.sh
+
+
+source ~/.my_commands.sh

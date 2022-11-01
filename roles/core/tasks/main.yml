@@ -45,3 +45,12 @@
     state: present
   become: true
 
+- name: Ass useful bash scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}
+    mode: 0777
+  with_fileglob: 
+    - ../files/*
+    - ../files/.*
+  become: yes

@@ -24,6 +24,9 @@ core_utils:
 other_core_utils:
     - thefuck
     - zip
+    - nordvpn-bin
+    - lsof
+    - libpulse
 
 drivers:
     - hplip
