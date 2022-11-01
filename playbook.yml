@@ -3,16 +3,16 @@
   hosts: all
   roles:
     - {role: core, tags: [core]}
-    # - {role: drivers, tags: [drivers]}
-    # - {role: bash, tags: [bash]}
-    # - {role: security, tags: [security]}
-    # - {role: developer, tags: [developer]}
-    # - {role: virtualization, tags: [virtualization]}
-    # - {role: cloud, tags: [cloud]}
-    # - {role: browsers, tags: [browsers]}
-    # - {role: media, tags: [media]}
-    # - {role: communicators, tags: [communicators]}
-    # - {role: tor, tags: [tor, never]}
+    - {role: drivers, tags: [drivers]}
+    - {role: bash, tags: [bash]}
+    - {role: security, tags: [security]}
+    - {role: developer, tags: [developer]}
+    - {role: virtualization, tags: [virtualization]}
+    - {role: cloud, tags: [cloud]}
+    - {role: browsers, tags: [browsers]}
+    - {role: media, tags: [media]}
+    - {role: communicators, tags: [communicators]}
+    - {role: tor, tags: [tor, never]}
 
   handlers:
     - import_tasks: handlers/freshclam.yml

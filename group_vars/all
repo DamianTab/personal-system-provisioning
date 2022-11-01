@@ -16,6 +16,8 @@ core_utils:
     - xclip
     - xorg-xinput
     - xorg
+    - zip
+    - unzip
     - vim
     - nano
     - yay
@@ -23,7 +25,6 @@ core_utils:
 # all other utils in official repositories and AUR
 other_core_utils:
     - thefuck
-    - zip
     - nordvpn-bin
     - lsof
     - libpulse
@@ -66,9 +67,6 @@ virtualization:
     - vagrant
     - virtualbox
     - virtualbox-ext-oracle
-
-# cloud:
-    # - aws-cli-v2-bin trzeba inaczej
 
 browsers:
     - google-chrome
