@@ -48,20 +48,12 @@ developer:
     - nodejs
     - terraform
     - postman-bin
-
     - jdk8-openjdk
     - jdk11-openjdk
     - jdk17-openjdk
-
-#     - jdk8-openjdk
-#     - jdk11-openjdk
-#     - jre8-openjdk-headless
-#     - jre8-openjdk
-#     - jre11-openjdk-headless
-#     - jre11-openjdk
-
-#     - go
-#     - go-tools
+    - go
+    - go-tools
+    - nvm
 
 #     - docker
 #     - docker-compose

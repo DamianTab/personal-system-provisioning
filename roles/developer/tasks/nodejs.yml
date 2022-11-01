@@ -1,0 +1,19 @@
+- name: Check if NVM already added to .bashrc
+  command: tail -n 1 .bashrc
+  become: true
+  register: nvm_exists
+  changed_when: nvm_exists.stdout != "source /usr/share/nvm/init-nvm.sh"
+
+- name: Set Nodejs Verison Manager environment
+  lineinfile:
+    path: /home/{{ user_name }}/.bashrc
+    line: source /usr/share/nvm/init-nvm.sh
+  become: true
+  when: nvm_exists.stdout != "source /usr/share/nvm/init-nvm.sh"
+  
+- name: Install all latest Nodejs versions
+  shell: source /usr/share/nvm/init-nvm.sh && nvm install --lts
+  become: true
+  become_user: "{{ user_name }}"
+  register: nodejs_environment
+  changed_when: "'is already installed.' not in nodejs_environment.stderr"
