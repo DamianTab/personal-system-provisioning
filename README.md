@@ -157,7 +157,7 @@ ansible-playbook playbook.yml --ask-become-pass --tags browsers
 <p align="center">
   <a name = "beautiful_bash"></a>
   <!-- <a href="" rel="noopener"> -->
- <img width=900px height=200px src="./assets/bash.png" alt="Beautiful bash example"></a>
+ <img width=900px height=250px src="./assets/bash.png" alt="Beautiful bash example"></a>
 </p>
 
 
