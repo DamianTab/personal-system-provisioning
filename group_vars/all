@@ -56,11 +56,9 @@ developer:
     - nvm
     - docker
     - docker-compose
-
-
-#     - kubectl
-#     - minikube
-#     - kubectx
+    - kubectl
+    - minikube
+    - kubectx
 
 
 virtualization:
