@@ -110,20 +110,20 @@ ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
 
 Roles supported:
 
-|        Roles       | always | never |    arguments    |                                                                    Description                                                                    |
-|:------------------:|:------:|:-----:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
-|        core        |    x   |   x   |        x        | Install Linux util libraries, python-pip, xinput, gcc, glib, pamac etc.                                                                           |
-|       drivers      |    x   |  yes  | pritner_ip_addr | (Optional) Install printer drivers: hplip                                                                                                         |
-|      security      |    x   |   x   |        x        | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                |
-|   virtualization   |    x   |   x   |        x        | Install vagrant, virtualbox and virtualbox-host-modules                                                                                           |
-|     virt_kernel    |    x   |  yes  |        x        | (Optional) Load kernel modules with modprobe. Optional step if virtualization is not working. Loads vboxdrv, vboxnetadp, vboxnetflt kernel module |
-|      browsers      |    x   |   x   |        x        | Install google-chrome, brave                                                                                                                      |
-|    communicators   |    x   |   x   |        x        | Install slack and discord.                                                                                                                        |
-|        media       |    x   |   x   |        x        | Install audacity, gimp, vlc player, spotify etc.                                                                                                  |
-|        cloud       |    x   |  yes  |        x        | (Optional) Install AWS CLI.                                                                                                                       |
-|         tor        |    x   |   x   |        x        | Install necessary tools for tor browser.                                                                                                          |
-| update_and_upgrade |   yes  |   x   |        x        | Update and upgrade system with all libraries                                                                                                      |
-
+|        Roles       | always | never |    arguments    |                                                                                   Description                                                                                   |
+|:------------------:|:------:|:-----:|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|        core        |    x   |   x   |        x        | Install Linux util libraries, python-pip, xinput, gcc, glib, pamac etc.                                                                                                         |
+|       drivers      |    x   |  yes  | pritner_ip_addr | (Optional) Install printer drivers: hplip                                                                                                                                       |
+|        bash        |    x   |  yes  |    user_name    | (Optional) Install [beautiful_bash](#beautiful_bash), add amazing plugins and some useful aliases in .bashrc -> e.g. autojump (https://github.com/wting/autojump), starship (https://starship.rs/) |
+|      security      |    x   |   x   |        x        | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                                              |
+|   virtualization   |    x   |   x   |        x        | Install vagrant, virtualbox and virtualbox-host-modules                                                                                                                         |
+|     virt_kernel    |    x   |  yes  |        x        | (Optional) Load kernel modules with modprobe. Optional step if virtualization is not working. Loads vboxdrv, vboxnetadp, vboxnetflt kernel module                               |
+|      browsers      |    x   |   x   |        x        | Install google-chrome, brave                                                                                                                                                    |
+|    communicators   |    x   |   x   |        x        | Install slack and discord.                                                                                                                                                      |
+|        media       |    x   |   x   |        x        | Install audacity, gimp, vlc player, spotify etc.                                                                                                                                |
+|        cloud       |    x   |  yes  |        x        | (Optional) Install AWS CLI.                                                                                                                                                     |
+|         tor        |    x   |   x   |        x        | Install necessary tools for tor browser.                                                                                                                                        |
+| update_and_upgrade |   yes  |   x   |        x        | Update and upgrade system with all libraries                                                                                                                                    |
 
 Roles with attribute always will always be executed, those with never has to be pointed out explicitly. Rest is under default option (no need to explicit select roles) or under default role called "all". For example to execute all default roles and install drivers (optional role) must run:
 
@@ -136,6 +136,14 @@ Example on how to install only browsers:
 ```
 ansible-playbook playbook.yml --ask-become-pass --tags browsers
 ```
+
+### Beautiful Bash Example
+
+<p align="center">
+  <a name = "beautiful_bash"></a>
+  <!-- <a href="" rel="noopener"> -->
+ <img width=1200px height=250px src="./assets/bash.png" alt="Beautiful bash example"></a>
+</p>
 
 
 <br/>
@@ -152,3 +160,4 @@ ansible-playbook playbook.yml --ask-become-pass --tags browsers
 <br/>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+- [Beautiful Bash by Chris Titus][https://github.com/christitustech/mybash]

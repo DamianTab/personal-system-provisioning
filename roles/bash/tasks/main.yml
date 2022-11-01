@@ -1,0 +1,26 @@
+- name: Transfer "Beautiful Bash" scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}/beautiful_bash/
+    mode: 0777
+  with_fileglob: 
+    - ../files/*
+    - ../files/.*
+  become: yes
+  become_user: "{{ user_name }}"
+
+- name: Adding existing user '{{ user_name }}' to group wheel
+  user:
+    name: '{{ user_name }}'
+    groups: wheel
+    append: yes
+  become: yes
+
+- name: Reset ssh connection to allow user's group change to affect ansible user
+  ansible.builtin.meta:
+    reset_connection
+
+- name: Execute "Beautiful Bash" scripts
+  command: "sh /home/{{ user_name }}/beautiful_bash/setup-arch.sh"
+  become: yes
+  become_user: "{{ user_name }}"
