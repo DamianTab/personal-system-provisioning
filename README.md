@@ -101,7 +101,7 @@ ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_MAIL"  --ask-become-pass --tags all,drivers,bash,developer,cloud
+ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.10 user_name=vagrant git_user_name=TEST_USER git_user_email=test@gmail.com"  --ask-become-pass --tags all,drivers,bash,developer,cloud
 ```
 
 <br/>
