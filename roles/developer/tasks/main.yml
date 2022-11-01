@@ -1,0 +1,6 @@
+- name: Install developer tools - YAY
+  yay:
+    name: "{{developer}}"
+    state: present
+  become: true
+

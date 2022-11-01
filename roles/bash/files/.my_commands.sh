@@ -15,7 +15,9 @@ alias con='source /opt/anaconda/bin/activate root'
 alias cond='conda deactivate'
 alias myip='curl ipinfo.io'
 
-alias python='python2'
+alias javals='archlinux-java status'
+alias javas='archlinux-java status'
+
 alias docker_run_check='docker inspect --format "$(curl -s https://gist.githubusercontent.com/efrecon/8ce9c75d518b6eb863f667442d7bc679/raw/run.tpl)" $1'
 
 

@@ -6,11 +6,11 @@
     # - {role: drivers, tags: [drivers]}
     # - {role: bash, tags: [bash]}
     # - {role: security, tags: [security]}
+    - {role: developer, tags: [developer]}
     # - {role: virtualization, tags: [virtualization]}
-    # - {role: de, tags: [virtualization]}
     # - {role: browsers, tags: [browsers]}
-    # - {role: communicators, tags: [communicators]}
     # - {role: media, tags: [media]}
+    # - {role: communicators, tags: [communicators]}
     # - {role: tor, tags: [tor, never]}
 
   handlers:

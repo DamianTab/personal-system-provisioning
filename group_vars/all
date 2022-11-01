@@ -38,16 +38,20 @@ security:
     - ufw
     - ufw-extras
 
-# developer_tools:
-#     - jetbrains-toolbox
-#     - visual-studio-code-bin
-#     - ansible
-#     - ansible-lint
-#     - maven
-#     - npm
-#     - nodejs
-#     - terraform
-#     - postman-bin
+developer:
+    - jetbrains-toolbox
+    - visual-studio-code-bin
+    - ansible
+    - ansible-lint
+    - maven
+    - npm
+    - nodejs
+    - terraform
+    - postman-bin
+
+    - jdk8-openjdk
+    - jdk11-openjdk
+    - jdk17-openjdk
 
 #     - jdk8-openjdk
 #     - jdk11-openjdk
