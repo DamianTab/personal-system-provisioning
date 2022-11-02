@@ -2,6 +2,7 @@
   shell: yes '' | ssh-keygen -t ed25519 -N '' -f /home/{{ user_name }}/.ssh/ssh_key
   become_user: "{{ user_name }}"
   become: true
+  ignore_errors: true
 
 - name: Add ssh key to ssh-agent
   shell: |
