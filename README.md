@@ -95,13 +95,13 @@ vagrant up --provision
 #### Run Ansible playbook against the Vagrant VM
 ```
 ansible-lint
-ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
+ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass | tee ansible.log
 ```
 
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor
+ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor | tee ansible.log
 ```
 
 <br/>
@@ -110,13 +110,13 @@ ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=1
 #### Run Ansible playbook against localhost
 ```
 ansible-lint
-ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
+ansible-playbook -vv playbook.yml -l localhost --ask-become-pass | tee ansible.log
 ```
 
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor
+ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor | tee ansible.log
 ```
 
 ## :toolbox: Playbook Roles
