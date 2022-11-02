@@ -11,6 +11,7 @@
 
 - name: Deny all incoming access
   community.general.ufw:
+    state: enabled
     policy: deny
     direction: incoming
   become: true
