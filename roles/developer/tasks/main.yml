@@ -5,5 +5,6 @@
   become: true
 
 - import_tasks: git.yml
+- import_tasks: ssh.yml
 - import_tasks: nodejs.yml
 - import_tasks: docker.yml

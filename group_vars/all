@@ -18,7 +18,7 @@ core_utils:
     - xorg
     - zip
     - unzip
-    - vim
+    - gvim
     - nano
     - yay
 

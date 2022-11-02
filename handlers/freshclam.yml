@@ -1,5 +1,0 @@
----
-- name: Update freshClam database
-  command: freshclam
-  become: true
-  listen: freshclam-listener

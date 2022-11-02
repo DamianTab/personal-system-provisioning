@@ -1,5 +1,5 @@
 - name: Check if NVM already added to .bashrc
-  command: tail -n 1 .bashrc
+  command: tail -n 1 /home/{{ user_name }}/.bashrc
   become: true
   register: nvm_exists
   changed_when: nvm_exists.stdout != "source /usr/share/nvm/init-nvm.sh"

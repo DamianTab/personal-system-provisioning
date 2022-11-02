@@ -101,7 +101,7 @@ ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.10 user_name=vagrant git_user_name=TEST_USER git_user_email=test@gmail.com"  --ask-become-pass --tags all,drivers,bash,developer,cloud
+ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor
 ```
 
 <br/>
@@ -116,7 +116,7 @@ ansible-playbook -vv playbook.yml -l localhost --ask-become-pass
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_MAIL"  --ask-become-pass --tags all,drivers,bash,developer,cloud
+ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor
 ```
 
 ## :toolbox: Playbook Roles
@@ -130,7 +130,7 @@ Roles supported:
 |        bash        |    x   |  yes  |                 user_name                | (Optional) Install beautiful bash, add amazing plugins and some useful aliases in .bashrc -> e.g. autojump (https://github.com/wting/autojump), starship (https://starship.rs/) |
 |      security      |    x   |   x   |                     x                    | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                                              |
 |      developer     |    x   |  yes  | user_name, git_user_name, git_user_email | Install all necessary programmers tools like vscode, jetbrains, docker, kubernetes, maven, npm etc. and environments for java, go, nodejs.                                      |
-|   virtualization   |    x   |   x   |                     x                    | Install vagrant, virtualbox and virtualbox-host-modules                                                                                                                         |
+|   virtualization   |    x   |  yes  |                     x                    | Install vagrant, virtualbox and virtualbox-host-modules                                                                                                                         |
 |     virt_kernel    |    x   |  yes  |                     x                    | (Optional) Load kernel modules with modprobe. Optional step if virtualization is not working. Loads vboxdrv, vboxnetadp, vboxnetflt kernel module                               |
 |        cloud       |    x   |  yes  |                 user_name                | (Optional) Install AWS CLI.                                                                                                                                                     |
 |      browsers      |    x   |   x   |                     x                    | Install google-chrome, brave                                                                                                                                                    |
