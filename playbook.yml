@@ -5,6 +5,7 @@
     - {role: core, tags: [core]}
     - {role: drivers, tags: [drivers, never]}
     - {role: bash, tags: [bash, never]}
+    - {role: fish, tags: [fish, never]}
     - {role: security, tags: [security]}
     - {role: developer, tags: [developer, never]}
     - {role: virtualization, tags: [virtualization, never]}

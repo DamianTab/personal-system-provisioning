@@ -5,7 +5,7 @@
     mode: 0777
   with_fileglob: 
     - ../files/*
-    - ../files/.*
+    - ../files/.bashrc
   become: yes
   become_user: "{{ user_name }}"
 
@@ -22,5 +22,16 @@
 
 - name: Execute "Beautiful Bash" scripts
   command: "sh /home/{{ user_name }}/beautiful_bash/setup-arch.sh"
+  become: yes
+  become_user: "{{ user_name }}"
+
+- name: Copy my_aliases.sh and my_bash_commands.sh scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}
+    mode: 0777
+  with_fileglob: 
+    - ../files/.my_bash_commands.sh
+    - ../../../shared/.my_aliases.sh
   become: yes
   become_user: "{{ user_name }}"

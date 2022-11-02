@@ -1,0 +1,28 @@
+- name: Add my own fish commands and aliases to config.fish
+  shell: |
+    echo "#My own aliases" >> /home/{{ user_name }}/.config/fish/config.fish
+    echo "source ~/.my_aliases.sh" >> /home/{{ user_name }}/.config/fish/config.fish
+    echo "#My own fish commands" >> /home/{{ user_name }}/.config/fish/config.fish
+    echo "source ~/.my_fish_commands.sh" >> /home/{{ user_name }}/.config/fish/config.fish
+  become_user: "{{ user_name }}"
+  become: true
+
+
+- name: Copy my_aliases.sh and my_fish_commands.sh scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}
+    mode: 0777
+  with_fileglob: 
+    - ../files/.my_fish_commands.sh
+    - ../../../shared/.my_aliases.sh
+  become: yes
+  become_user: "{{ user_name }}"
+
+
+- name: Kill bash ssh-agent (Necessary for fish)
+  shell: kill -9 $(pgrep ssh-agent)
+  become_user: "{{ user_name }}"
+  become: true
+
+  
