@@ -31,4 +31,20 @@
     - ../files/conky/*
   become: yes
   become_user: "{{ user_name }}"
-  
+
+- name: Copy conky autostart job
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}/.config/autostart/
+    mode: 0777
+  with_fileglob: 
+    - ../files/conky.desktop
+  become: yes
+  become_user: "{{ user_name }}"
+
+
+- name: Add executable line to conky.desktop job
+  lineinfile:
+    path: /home/{{ user_name }}/.config/autostart/conky.desktop
+    line: Exec=sh /home/{{ user_name }}/.config/conky/startup-conky.sh
+  become: true 
