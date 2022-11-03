@@ -11,7 +11,7 @@
     dest: /home/{{ user_name }}/.config/konsave/profiles/
     mode: 0777
   with_fileglob: 
-    - ../files/*
+    - ../files/konsave/*
   become: yes
   become_user: "{{ user_name }}"
 
@@ -21,4 +21,14 @@
   become_user: "{{ user_name }}"
   become: true
 
+
+- name: Copy conky settings
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}/.config/conky/
+    mode: 0777
+  with_fileglob: 
+    - ../files/conky/*
+  become: yes
+  become_user: "{{ user_name }}"
   
