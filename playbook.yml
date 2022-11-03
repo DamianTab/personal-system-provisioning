@@ -7,6 +7,7 @@
     - {role: developer, tags: [developer, never]}
     - {role: bash, tags: [bash, never]}
     - {role: fish, tags: [fish, never]}
+    - {role: desktop, tags: [desktop, never]}
     - {role: security, tags: [security]}
     - {role: virtualization, tags: [virtualization, never]}
     - {role: cloud, tags: [cloud, never]}

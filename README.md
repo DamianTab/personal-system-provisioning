@@ -101,7 +101,7 @@ ansible-playbook -vv playbook.yml -l testmachine --ask-become-pass | tee ansible
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor | tee ansible.log
+ansible-playbook -vv playbook.yml -l testmachine --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL konsave_profile=diehard"  --ask-become-pass --tags all,drivers,bash,fish,desktop,developer,virtualization,cloud,tor | tee ansible.log
 ```
 
 <br/>
@@ -116,7 +116,7 @@ ansible-playbook -vv playbook.yml -l localhost --ask-become-pass | tee ansible.l
 #### Install everything (execute all roles)
 
 ```
-ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=192.168.1.4 user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL"  --ask-become-pass --tags all,drivers,bash,developer,virtualization,cloud,tor | tee ansible.log
+ansible-playbook -vv playbook.yml -l localhost --extra-vars="pritner_ip_addr=IP_ADDR user_name=USER git_user_name=GIT_USER git_user_email=GIT_EMAIL konsave_profile=diehard"  --ask-become-pass --tags all,drivers,bash,fish,desktop,developer,virtualization,cloud,tor | tee ansible.log
 ```
 
 ## :toolbox: Playbook Roles
@@ -129,6 +129,7 @@ Roles supported:
 |       drivers      |    x   |  yes  |              pritner_ip_addr             | (Optional) Install printer drivers: hplip                                                                                                                                       |
 |        bash        |    x   |  yes  |                 user_name                | (Optional) Install beautiful bash, add amazing plugins and some useful aliases in .bashrc -> e.g. autojump (https://github.com/wting/autojump), starship (https://starship.rs/) |
 |        fish        |    x   |  yes  |                 user_name                | (Optional) Configure fish for Garuda linux OS |
+|       desktop      |    x   |  yes  |        user_name, konsave_profile        | (Optional) Install konsave with my KDE settings like shortcuts, widgets etc., install and configure conky |
 |      security      |    x   |   x   |                     x                    | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                                              |
 |      developer     |    x   |  yes  | user_name, git_user_name, git_user_email | Install all necessary programmers tools like vscode, jetbrains, docker, kubernetes, maven, npm etc. and environments for java, go, nodejs.                                      |
 |   virtualization   |    x   |  yes  |                     x                    | Install vagrant, virtualbox and virtualbox-host-modules                                                                                                                         |

@@ -32,6 +32,10 @@ other_core_utils:
 drivers:
     - hplip
 
+desktop:
+    - konsave
+    - conky
+
 security:
     - clamav
     - clamtk
