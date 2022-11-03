@@ -599,6 +599,9 @@ eval "$(starship init bash)"
 #Autojump
 . /usr/share/autojump/autojump.sh
 
+#thefuck
+eval "$(thefuck --alias)"
+
 #My own aliases
 source ~/.my_aliases.sh
 #My own bash commands

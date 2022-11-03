@@ -9,3 +9,6 @@ if test -z (pgrep ssh-agent)
 
   ssh-add $HOME/.ssh/ssh_key
 end
+
+#thefuck
+thefuck --alias | source
