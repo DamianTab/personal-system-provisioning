@@ -32,6 +32,10 @@ other_core_utils:
 drivers:
     - hplip
 
+fish:
+    - fisher
+    - fish-nvm
+
 desktop:
     - konsave
     - conky

@@ -12,3 +12,10 @@ end
 
 #thefuck
 thefuck --alias | source
+
+# Add autojump
+if test -e "~/.autojump/share/autojump/autojump.fish"
+  source ~/.autojump/share/autojump/autojump.fish
+else if test -e "/usr/share/autojump/autojump.fish"
+  source /usr/share/autojump/autojump.fish
+end

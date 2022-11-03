@@ -1,3 +1,9 @@
+- name: Install fish packages and addons - YAY
+  yay:
+    name: "{{fish}}"
+    state: present
+  become: true
+
 - name: Add my own fish commands and aliases to config.fish
   shell: |
     echo "#My own aliases" >> /home/{{ user_name }}/.config/fish/config.fish
