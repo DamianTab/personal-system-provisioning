@@ -29,6 +29,9 @@ other_core_utils:
     - lsof
     - libpulse
     - stacer
+    - woeusb-ng
+    - popsicle
+    - wireshark-qt
 
 drivers:
     - hplip
@@ -71,6 +74,7 @@ developer:
     - kubectl
     - minikube
     - kubectx
+    - klogg
 
 
 virtualization:
@@ -87,6 +91,7 @@ media:
     - vlc
     - gimp
     - spotify
+    - qnapi
 
 communicators:
     - slack-desktop
@@ -96,4 +101,6 @@ tor:
     - nyx
     - tor
     - torbrowser-launcher
+    - qbittorrent
+    
 
