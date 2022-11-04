@@ -92,6 +92,7 @@ media:
     - gimp
     - spotify
     - qnapi
+    - freeoffice
 
 communicators:
     - slack-desktop
