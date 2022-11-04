@@ -127,8 +127,8 @@ Roles supported:
 |:------------------:|:------:|:-----:|:----------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |        core        |    x   |   x   |                     x                    | Install Linux util libraries, python-pip, xinput, gcc, glib, pamac etc.                                                                                                         |
 |       drivers      |    x   |  yes  |              pritner_ip_addr             | (Optional) Install printer drivers 'hplip' and nvidia GPU switcher 'nvidia-prime' -> https://wiki.garudalinux.org/en/optimus-device                                                                                                |
-|        bash        |    x   |  yes  |                 user_name                | (Optional) Install beautiful bash, add amazing plugins and some useful aliases in .bashrc -> e.g. autojump (https://github.com/wting/autojump), starship (https://starship.rs/) |
-|        fish        |    x   |  yes  |                 user_name                | (Optional) Configure fish for Garuda linux OS |
+|        bash        |    x   |  yes  |                 user_name                | (Optional) Install [beautiful bash](#beautiful_bash), add amazing plugins, colors and some useful aliases in .bashrc -> e.g. autojump (https://github.com/wting/autojump), starship (https://starship.rs/) |
+|        fish        |    x   |  yes  |                 user_name                | (Optional) Configure [fish] for Garuda linux OS - beautiful shell with nice autocompletion |
 |       desktop      |    x   |  yes  |        user_name, konsave_profile        | (Optional) Install konsave with my KDE settings like shortcuts, widgets etc., install and configure conky. Please specify which konsave profile you want to install: 'diehard_conky' or 'diehard_widgets' (prepared with some widgets) |
 |      security      |    x   |   x   |                     x                    | Install clamav, clamtk, ufw, ufw-extras and gufw. Configure all deamons and refresh virus database                                                                              |
 |      developer     |    x   |  yes  | user_name, git_user_name, git_user_email | Install all necessary programmers tools like vscode, jetbrains, docker, kubernetes, maven, npm etc. and environments for java, go, nodejs.                                      |
@@ -158,8 +158,18 @@ ansible-playbook playbook.yml --ask-become-pass --tags browsers
 
 <p align="center">
   <a name = "beautiful_bash"></a>
-  <!-- <a href="" rel="noopener"> -->
- <img width=900px height=250px src="./assets/bash.png" alt="Beautiful bash example"></a>
+ <img src="./assets/bash.png" alt="Beautiful bash example"></a>
+</p>
+
+### Fish Example
+
+<p align="center">
+  <a name = "fish"></a>
+ <img src="./assets/fish.png" alt="Beautiful bash example"></a>
+</p>
+
+<p align="center">
+ <img src="./assets/fish2.png" alt="Beautiful bash example"></a>
 </p>
 
 
