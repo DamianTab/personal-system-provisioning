@@ -75,3 +75,6 @@ alias javals='archlinux-java status'
 alias javas='archlinux-java status'
 
 alias docker_run_check='docker inspect --format "$(curl -s https://gist.githubusercontent.com/efrecon/8ce9c75d518b6eb863f667442d7bc679/raw/run.tpl)" $1'
+
+alias nvidiarun='prime-run'
+alias nvidiatest='prime-run glxinfo -B | grep "OpenGL vendor string"'
