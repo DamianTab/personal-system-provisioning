@@ -7,11 +7,9 @@
 
 - name: Copy konsaves profiles
   copy: 
-    src: "{{ item }}"
+    src: ../files/konsave/
     dest: /home/{{ user_name }}/.config/konsave/profiles/
     mode: 0777
-  with_fileglob: 
-    - ../files/konsave/*
   become: yes
   become_user: "{{ user_name }}"
 

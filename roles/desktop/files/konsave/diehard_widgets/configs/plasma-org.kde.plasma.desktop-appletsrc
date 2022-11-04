@@ -1,11 +1,12 @@
 [ActionPlugins][0]
+MiddleButton;NoModifier=org.kde.paste
 RightButton;NoModifier=org.kde.contextmenu
 wheel:Vertical;NoModifier=org.kde.switchdesktop
 
 [Containments][1]
 ItemGeometries-1920x1080=Applet-17:16,48,224,208,0;Applet-40:16,256,224,272,0;Applet-19:16,544,336,224,0;Applet-11:16,784,336,192,0;Applet-3:256,48,240,192,0;Applet-12:256,256,224,288,0;Applet-2:832,192,272,128,0;Applet-15:1408,176,112,176,0;Applet-44:1552,48,352,64,0;Applet-41:1552,128,352,320,0;
 ItemGeometriesHorizontal=Applet-17:16,48,224,208,0;Applet-40:16,256,224,272,0;Applet-19:16,544,336,224,0;Applet-11:16,784,336,192,0;Applet-3:256,48,240,192,0;Applet-12:256,256,224,288,0;Applet-2:832,192,272,128,0;Applet-15:1408,176,112,176,0;Applet-44:1552,48,352,64,0;Applet-41:1552,128,352,320,0;
-activityId=9decef25-fdcf-41c6-8bfa-d125698f8d1b
+activityId=53b6f5ec-254c-459a-81a8-7fd6681b4e0b
 formfactor=0
 immutability=1
 lastScreen=0
@@ -156,8 +157,6 @@ DialogWidth=680
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=454
 ToolBoxButtonY=40
-positions={"1920x1080":["7"\\,"17"\\,"desktop:/todos.txt"\\,"6"\\,"14"\\,"desktop:/steam.desktop"\\,"6"\\,"13"]}
-sortMode=-1
 
 [Containments][1][Wallpaper][org.kde.image][General]
 Image=/usr/share/wallpapers/garuda-wallpapers/Ghosts.jpg
@@ -284,4 +283,3 @@ knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,or
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/steam.desktop,0,9decef25-fdcf-41c6-8bfa-d125698f8d1b,desktop:/todos.txt,0,9decef25-fdcf-41c6-8bfa-d125698f8d1b,desktop:/shortcuts.kksrc,0,9decef25-fdcf-41c6-8bfa-d125698f8d1b
