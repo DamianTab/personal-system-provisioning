@@ -28,6 +28,7 @@ other_core_utils:
     - nordvpn-bin
     - lsof
     - libpulse
+    - stacer
 
 drivers:
     - hplip
