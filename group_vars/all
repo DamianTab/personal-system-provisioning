@@ -34,6 +34,9 @@ other_core_utils:
     - wireshark-qt
 
 drivers:
+    - cups
+    - sane
+    - xsane
     - hplip
     - nvidia-prime
 
