@@ -3,3 +3,10 @@
     name: "{{tor}}"
     state: present
   become: true
+
+- name: Configure nordvpn
+  shell: |
+    usermod -aG nordvpn $USER
+    systemctl start nordvpnd
+  become_user: "{{ user_name }}"
+  become: true
