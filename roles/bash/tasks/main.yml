@@ -25,13 +25,14 @@
   become: yes
   become_user: "{{ user_name }}"
 
-- name: Copy my_aliases.sh and my_bash_commands.sh scripts
+- name: Copy my_aliases.sh, my_bash_commands.sh and my startup scripts
   copy: 
     src: "{{ item }}"
     dest: /home/{{ user_name }}
     mode: 0777
   with_fileglob: 
     - ../files/.my_bash_commands.sh
+    - ../files/.my_startup_services.sh
     - ../../../shared/.my_aliases.sh
   become: yes
   become_user: "{{ user_name }}"

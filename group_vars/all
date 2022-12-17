@@ -53,6 +53,7 @@ security:
     - gufw
     - ufw
     - ufw-extras
+    - bitwarden
 
 developer:
     - jetbrains-toolbox
