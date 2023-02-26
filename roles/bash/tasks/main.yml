@@ -1,48 +1,53 @@
-# - name: Transfer "Beautiful Bash" scripts
-#   copy: 
-#     src: "{{ item }}"
-#     dest: /home/{{ user_name }}/beautiful_bash/
-#     mode: 0777
-#   with_fileglob: 
-#     - ../files/*
-#     - ../files/.bashrc
-#   become: yes
-#   become_user: "{{ user_name }}"
+- name: Transfer "Beautiful Bash" scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}/beautiful_bash/
+    mode: 0777
+  with_fileglob: 
+    - ../files/*
+    - ../files/.bashrc
+  become: yes
+  become_user: "{{ user_name }}"
 
-# - name: Adding existing user '{{ user_name }}' to group wheel
-#   user:
-#     name: '{{ user_name }}'
-#     groups: wheel
-#     append: yes
-#   become: yes
-
-# - name: Reset ssh connection to allow user's group change to affect ansible user
-#   ansible.builtin.meta:
-#     reset_connection
-
-# - name: Execute "Beautiful Bash" scripts
-#   command: "sh /home/{{ user_name }}/beautiful_bash/setup-arch.sh"
-#   become: yes
-#   become_user: "{{ user_name }}"
-
-# - name: Copy my_aliases.sh, my_bash_commands.sh and my startup scripts
-#   copy: 
-#     src: "{{ item }}"
-#     dest: /home/{{ user_name }}
-#     mode: 0777
-#   with_fileglob: 
-#     - ../files/.my_bash_commands.sh
-#     - ../files/.my_startup_services.sh
-#     - ../../../shared/.my_aliases.sh
-#   become: yes
-#   become_user: "{{ user_name }}"
-
-- name: Startup script | Create my_startup service
-  template: src=my_startup.service.j2 dest=/lib/systemd/system/my_startup.service mode=644
-  notify:
-    - reload systemctl
+- name: Adding existing user '{{ user_name }}' to group wheel
+  user:
+    name: '{{ user_name }}'
+    groups: wheel
+    append: yes
   become: yes
 
-- name: Startup script | Start my_startup.service
-  service: name=my_startup.service state=started enabled=yes
+- name: Reset ssh connection to allow user's group change to affect ansible user
+  ansible.builtin.meta:
+    reset_connection
+
+- name: Execute "Beautiful Bash" scripts
+  command: "sh /home/{{ user_name }}/beautiful_bash/setup-arch.sh"
   become: yes
+  become_user: "{{ user_name }}"
+
+- name: Copy my_aliases.sh, my_bash_commands.sh and my startup scripts
+  copy: 
+    src: "{{ item }}"
+    dest: /home/{{ user_name }}
+    mode: 0777
+  with_fileglob: 
+    - ../files/.my_bash_commands.sh
+    - ../files/.my_startup_services.sh
+    - ../../../shared/.my_aliases.sh
+  become: yes
+  become_user: "{{ user_name }}"
+
+- name: Create startup script for user
+  command: "sudo ln -s /home/diehard/.my_startup_services.sh /etc/profile.d/"
+  become: yes
+  become_user: "{{ user_name }}"
+
+# - name: Startup script | Create my_startup as a service
+#   template: src=my_startup.service.j2 dest=/lib/systemd/system/my_startup.service mode=644
+#   notify:
+#     - reload systemctl
+#   become: yes
+
+# - name: Startup script | Start my_startup.service
+#   service: name=my_startup.service state=started enabled=yes
+#   become: yes
