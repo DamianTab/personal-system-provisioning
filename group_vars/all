@@ -101,6 +101,7 @@ media:
 communicators:
     - slack-desktop
     - discord
+    - signal-desktop
 
 tor:
     - nyx

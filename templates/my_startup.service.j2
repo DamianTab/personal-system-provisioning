@@ -1,0 +1,7 @@
+[Unit]
+Description=Service for executing startup scripts
+[Service]
+Type=simple
+ExecStart=/home/{{ user_name }}/.my_startup_services.sh
+[Install]
+WantedBy=multi-user.target

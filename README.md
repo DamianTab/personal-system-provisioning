@@ -178,7 +178,7 @@ ansible-playbook playbook.yml --ask-become-pass --tags browsers
 - Q: I don't see any widgets and your wallpaper
   A: Please before applying role 'desktop' check your `activityId` in /home/{{username}}/.config/plasma-org.kde.plasma.desktop-appletsrc in `[Containments][1]` (responsible element for Desktop). Copy this id e.g. `activityId=53b6f5ec-254c-459a-81a8-7fd6681b4e0b`. After applying konsave settings (before restart) replace the activityId in /home/{{username}}/.config/plasma-org.kde.plasma.desktop-appletsrc with this in clipboard.
 
-  Remeber these konsave settings are only for clean buil - clean desktop without icons -> other way plasmashell will throw errors in consequence will not show any widgets
+  Remeber these konsave settings are only for clean build - clean desktop without icons -> other way plasmashell will throw errors in consequence will not show any widgets
  
 
 
