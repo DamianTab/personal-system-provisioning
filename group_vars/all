@@ -19,6 +19,7 @@ core_utils:
     - zip
     - unzip
     - gvim
+    - ksuperkey
     - nano
     - yay
 
