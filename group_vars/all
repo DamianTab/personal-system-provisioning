@@ -6,6 +6,7 @@ core_utils:
     - glib2
     - glibc
     - htop
+    - iotop
     - make
     - cmake
     - pamac
@@ -55,6 +56,7 @@ security:
     - ufw
     - ufw-extras
     - bitwarden
+    - nordvpn-bin
 
 developer:
     - jetbrains-toolbox
@@ -108,7 +110,6 @@ tor:
     - tor
     - torbrowser-launcher
     - qbittorrent
-    - nordvpn-bin
 
     
 
