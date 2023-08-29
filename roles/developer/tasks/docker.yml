@@ -5,14 +5,6 @@
     append: true
   become: true
 
-# - name: Restart os
-#   ansible.builtin.reboot:
-
-# - name: Reset ssh connection to allow user's group change to affect ansible user
-#   ansible.builtin.meta:
-#     reset_connection
-
-#todo delete
 
 - name: Docker - Enable and start the docker daemon
   ansible.builtin.systemd:

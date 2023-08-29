@@ -35,6 +35,7 @@ other_core_utils:
     - wireshark-qt
     - czkawka-gui
     - peazip-qt5
+    - jump
 
 
 drivers:

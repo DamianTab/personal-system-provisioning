@@ -4,22 +4,6 @@
     state: present
   become: true
 
-
-- name: Copy konsaves profiles
-  copy: 
-    src: ../files/konsave/
-    dest: /home/{{ user_name }}/.config/konsave/profiles/
-    mode: 0777
-  become: yes
-  become_user: "{{ user_name }}"
-
-
-- name: Apply konsave settings (MUST RESTART/LOG OUT AFTERWARDS !!!)
-  shell: konsave -a {{ konsave_profile }}
-  become_user: "{{ user_name }}"
-  become: true
-
-
 - name: Copy conky settings
   copy: 
     src: "{{ item }}"
