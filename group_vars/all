@@ -86,6 +86,7 @@ developer:
     - minikube
     - kubectx
     - klogg
+    - filezilla
 
 
 virtualization:
