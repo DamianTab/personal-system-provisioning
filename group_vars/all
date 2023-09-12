@@ -107,6 +107,7 @@ media:
     - freeoffice
     - obs-studio
     - thunderbird
+    - nomacs
 
 communicators:
     - slack-desktop
