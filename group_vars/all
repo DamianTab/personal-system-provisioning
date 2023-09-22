@@ -22,6 +22,7 @@ core_utils:
     - gvim
     - ksuperkey
     - nano
+    - gnome-calculator
     - yay
 
 # all other utils in official repositories and AUR
