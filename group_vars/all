@@ -45,6 +45,7 @@ drivers:
     - xsane
     - hplip
     - nvidia-prime
+    - pavucontrol
 
 fish:
     - fisher
